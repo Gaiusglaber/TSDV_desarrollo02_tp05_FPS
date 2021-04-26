@@ -13,6 +13,6 @@ public class CantBalas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<TMPro.TMP_Text>().text = "" + gun.balas;
+        GetComponent<TMPro.TMP_Text>().text = "" + gun.munition;
     }
 }
