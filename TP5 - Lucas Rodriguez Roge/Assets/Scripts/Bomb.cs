@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
-    public float hp = 100;
-    public float score = 0;
+    // Start is called before the first frame update
     void Start()
     {
         

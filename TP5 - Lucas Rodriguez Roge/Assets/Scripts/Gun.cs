@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class Gun : MonoBehaviour
 {
+    public Player player;
+    private GameObject bomb = null;
     private float distance = 5.0f;
     public int munition = 15;
     public int maxmunition = 15;
@@ -47,7 +49,14 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance);
-
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
+        {
+            if (hit.transform.GetComponent<Bomb>())
+            {
+                bomb = hit.transform.gameObject;
+                Destroy(bomb);
+                player.score += 100;
+            }
+        }
     }
 }
