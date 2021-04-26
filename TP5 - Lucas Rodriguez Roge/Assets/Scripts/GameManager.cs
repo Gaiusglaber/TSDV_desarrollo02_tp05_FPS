@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     {
         if (player.hp <= 50)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             player.GetComponentInChildren<Camera>().tag = "Untagged";
             endscreencamera.tag = "MainCamera";
             player.gameObject.SetActive(false);
