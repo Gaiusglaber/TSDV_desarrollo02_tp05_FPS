@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.hp <= 50)
+        if (player.hp <= 0)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
