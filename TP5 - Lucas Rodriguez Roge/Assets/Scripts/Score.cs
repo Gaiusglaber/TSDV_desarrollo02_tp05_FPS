@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Box : MonoBehaviour
+public class Score : MonoBehaviour
 {
     public Player player;
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -14,6 +13,6 @@ public class Box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GetComponent<TMPro.TMP_Text>().text = "" + player.score;
     }
 }

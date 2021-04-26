@@ -16,4 +16,13 @@ public class Player : MonoBehaviour
     {
         
     }
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.GetComponent<Box>())
+        {
+            Debug.Log("tetoytocando");
+            score += 100;
+            Destroy(hit.transform.gameObject);
+        }
+    }
 }
