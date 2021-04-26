@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float hp = 100;
     public float score = 0;
+    public int cantBoxesCollected = 0;
     void Start()
     {
         
@@ -20,8 +21,14 @@ public class Player : MonoBehaviour
     {
         if (hit.gameObject.GetComponent<Box>())
         {
-            Debug.Log("tetoytocando");
-            score += 100;
+            cantBoxesCollected++;
+            score += 250;
+            Destroy(hit.transform.gameObject);
+        }
+        if (hit.gameObject.GetComponent<Bomb>())
+        {
+            score -= 100;
+            hp -= 50;
             Destroy(hit.transform.gameObject);
         }
     }

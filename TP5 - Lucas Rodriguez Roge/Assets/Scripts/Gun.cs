@@ -12,6 +12,8 @@ public class Gun : MonoBehaviour
     public int maxmunition = 15;
     public float time_reload = 0;
     private bool reloaded = false;
+    public int cantShots = 0;
+    public int cantBombsShot = 0;
     void Start()
     {
         
@@ -24,6 +26,7 @@ public class Gun : MonoBehaviour
         {
             if (munition > 0)
             {
+                cantShots++;
                 Shoot();
                 munition--;
             }
@@ -53,8 +56,10 @@ public class Gun : MonoBehaviour
         {
             if (hit.transform.GetComponent<Bomb>())
             {
+
                 bomb = hit.transform.gameObject;
                 Destroy(bomb);
+                cantBombsShot++;
                 player.score += 100;
             }
         }
