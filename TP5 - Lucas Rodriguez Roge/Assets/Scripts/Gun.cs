@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Input = UnityEngine.Input;
+using KeyCode = UnityEngine.KeyCode;
 
 public class Gun : MonoBehaviour
 {
@@ -19,9 +21,22 @@ public class Gun : MonoBehaviour
         
     }
 
+    public void Appear()
+    {
+        Debug.Log("Estoy mostrando la pistola");
+    }
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            gameObject.SetActive(true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            gameObject.SetActive(false);
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (munition > 0)
