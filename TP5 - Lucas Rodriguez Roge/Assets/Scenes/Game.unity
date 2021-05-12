@@ -344,6 +344,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294264106}
   m_CullTransparentMesh: 0
+--- !u!1 &433989272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433989273}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433989273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433989272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.089, z: 0.2753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2063067821}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453130332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1580850514056834, guid: 619e6cf2df6b6134081a14e063da5e79, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4131198409668304, guid: 619e6cf2df6b6134081a14e063da5e79, type: 3}
       propertyPath: m_RootOrder
@@ -2641,6 +2671,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1013157267}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2063067821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4131198409668304, guid: 619e6cf2df6b6134081a14e063da5e79,
+    type: 3}
+  m_PrefabInstance: {fileID: 1013157267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2063067822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,6 +2689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdfa2919a57d0bd4fb213a8bb41fa31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 6873524323011095131, guid: 378625121ac8f174392a84d285ee6933, type: 3}
+  spawnPoint: {fileID: 433989273}
+  range: 15
 --- !u!1 &2119851094
 GameObject:
   m_ObjectHideFlags: 0
